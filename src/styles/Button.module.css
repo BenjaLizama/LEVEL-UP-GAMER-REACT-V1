@@ -1,0 +1,17 @@
+.btn {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  color: var(--color-texto-principal);
+  background-color: var(--color-acento-1);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--color-acento-1-hover);
+  transition: all 0.3s ease;
+}
