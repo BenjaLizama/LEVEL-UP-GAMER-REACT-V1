@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "../../styles/Settings.module.css";
+import styles from "../../styles/SettingsOption.module.css";
 
 export default function SettingsOption({ text, icon }) {
   return (
