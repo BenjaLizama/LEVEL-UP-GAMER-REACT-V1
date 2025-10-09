@@ -1,22 +1,23 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Banner from "./components/organisms/Banner";
 import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Test from "./components/pages/Test";
+import NavBottomBar from "./components/organisms/NavBottomBar";
+import Marketplace from "./components/pages/Marketplace";
+import Cart from "./components/pages/Cart";
+import Profile from "./components/pages/Profile";
 
 function App() {
   return (
     <>
-      <nav>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/about"}>About</Link>
-        <Link to={"/test"}>Test</Link>
-      </nav>
+      <Banner />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
+      <NavBottomBar />
     </>
   );
 }

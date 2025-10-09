@@ -10,7 +10,7 @@
   --color-texto-principal: #ffffff;
   --color-texto-secundario: #d3d3d3;
 
-  --color-fondo: #181818;
+  --color-fondo: #081127;
 
   --color-acento-1: #1e90ff;
   --color-acento-2: #39ff14;
@@ -24,9 +24,15 @@
 }
 
 body {
-  min-height: 100vh;
-  max-width: 100%;
-  box-sizing: border-box;
+  min-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 1fr 0.1fr;
+  background-color: var(--color-fondo);
+}
+
+hr {
+  margin: 0rem 1rem;
 }
 
 .error {
