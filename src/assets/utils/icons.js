@@ -8,6 +8,10 @@ import {
   faTriangleExclamation as faTriangleExclamationSolid,
   faLanguage as faLanguageSolid,
   faGear as faGearSolid,
+  faUser as faUserSolid,
+  faHouseChimney as faHouseChimneySolid,
+  faShop as faShopSolid,
+  faCartShopping as faCartShoppingSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -24,6 +28,10 @@ export const ICONS_SOLID = {
   alerta: faTriangleExclamationSolid,
   idioma: faLanguageSolid,
   configuracion: faGearSolid,
+  usuario: faUserSolid,
+  home: faHouseChimneySolid,
+  shop: faShopSolid,
+  cart: faCartShoppingSolid,
 };
 
 export const ICONS_REGULAR = {
