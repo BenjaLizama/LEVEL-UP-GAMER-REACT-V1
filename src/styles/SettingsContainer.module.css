@@ -1,0 +1,29 @@
+.container {
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 20%;
+}
+
+.title {
+  font-size: 18px;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto-secundario);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}

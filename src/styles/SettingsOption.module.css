@@ -11,6 +11,9 @@
   transition: all 0.1s ease;
   font-family: var(--fuente-principal);
   font-size: 25px;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 .container:hover {
@@ -23,4 +26,16 @@
   justify-content: space-evenly;
   align-items: center;
   column-gap: 1rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
