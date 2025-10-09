@@ -1,0 +1,13 @@
+.container {
+  padding: 2rem;
+}
+
+.text {
+  color: var(--color-texto-secundario);
+  font-family: var(--fuente-principal);
+  text-align: center;
+}
+
+.text span {
+  color: var(--color-acento-2);
+}

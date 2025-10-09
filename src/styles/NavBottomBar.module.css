@@ -1,0 +1,31 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navButton {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0rem;
+  row-gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-texto-principal);
+}
+
+.navButton:hover {
+  background-color: var(--color-acento-1);
+}
+
+.navButton span {
+  font-family: var(--fuente-principal);
+}

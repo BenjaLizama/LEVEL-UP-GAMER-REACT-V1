@@ -1,0 +1,16 @@
+.container {
+  color: var(--color-texto-principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 1rem;
+  padding: 2rem 0rem;
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+}
+
+.containerButton {
+  width: 70%;
+}
