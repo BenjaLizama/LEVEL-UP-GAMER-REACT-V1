@@ -2,10 +2,11 @@
   position: fixed;
   width: 100%;
   bottom: 0%;
-  background-color: var(--background-color);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #00000040;
+  backdrop-filter: blur(4px);
 }
 
 .navButton {
@@ -23,7 +24,7 @@
 }
 
 .navButton:hover {
-  background-color: var(--color-acento-1);
+  background-color: var(--color-acento-1-hover-blur);
 }
 
 .navButton span {
