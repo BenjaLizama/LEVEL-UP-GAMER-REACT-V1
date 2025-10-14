@@ -12,6 +12,7 @@ import {
   faHouseChimney as faHouseChimneySolid,
   faShop as faShopSolid,
   faCartShopping as faCartShoppingSolid,
+  faUpRightFromSquare as faUpRightFromSquareSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -32,6 +33,7 @@ export const ICONS_SOLID = {
   home: faHouseChimneySolid,
   shop: faShopSolid,
   cart: faCartShoppingSolid,
+  link: faUpRightFromSquareSolid,
 };
 
 export const ICONS_REGULAR = {

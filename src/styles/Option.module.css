@@ -1,6 +1,16 @@
 .container {
-  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--color-texto-principal);
+  padding: 0.8rem 2rem;
+}
+
+.container:hover {
+  background-color: var(--color-acento-1);
+  border-radius: 0rem 0rem 0.3rem 0.3rem;
 }
 
 .text {
+  font-family: var(--fuente-principal);
 }
