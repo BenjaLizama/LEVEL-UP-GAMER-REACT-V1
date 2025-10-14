@@ -4,7 +4,11 @@
 
 .background {
   position: absolute;
-  background: linear-gradient(to bottom, transparent 1%, var(--color-fondo) 90%),
+  background: linear-gradient(
+      to bottom,
+      transparent 1%,
+      var(--background-color-2) 90%
+    ),
     url("../../public/images/Banner.jpg");
   background-size: cover;
   background-size: cover;

@@ -5,18 +5,17 @@
   --fuente-principal: "Roboto", sans-serif;
   --fuente-encabezado: "Orbitron", sans-serif;
 
-  --background-color: #040b1b;
+  --background-color-1: #040b1b;
+  --background-color-2: #081127;
 
   --color-texto-principal: #ffffff;
   --color-texto-secundario: #d3d3d3;
-
-  --color-fondo: #081127;
 
   --color-acento-1: #1e90ff;
   --color-acento-2: #39ff14;
   --color-error: #d51313;
 
-  --color-acento-1-hover: #196cc0ae;
+  --color-acento-1-hover: #1e90ff90;
 }
 
 * {
@@ -28,7 +27,7 @@ body {
   overflow-x: hidden;
   display: grid;
   grid-template-rows: 1fr 0.1fr;
-  background-color: var(--color-fondo);
+  background-color: var(--background-color-2);
 }
 
 hr {
