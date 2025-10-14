@@ -2,7 +2,8 @@ import Option from "../molecules/Option";
 
 export const FAVORITOS = (
   <>
-    <Option />
+    <Option text={"Hola Mundo 1"} />
+    <Option text={"Hola Mundo 2"} />
   </>
 );
 

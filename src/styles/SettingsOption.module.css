@@ -14,6 +14,7 @@
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 20%;
+  margin-top: 0.5rem;
 }
 
 .container:hover {
@@ -38,4 +39,15 @@
     opacity: 1;
     scale: 1;
   }
+}
+
+.active {
+  background-color: var(--color-acento-1-hover);
+  border-radius: 0.3rem 0.3rem 0rem 0rem;
+  border-bottom: 1px solid var(--color-texto-secundario);
+}
+
+.content {
+  background-color: var(--color-acento-1-hover);
+  border-radius: 0rem 0rem 0.3rem 0.3rem;
 }
