@@ -1,0 +1,22 @@
+.container {
+  color: var(--color-texto-principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  row-gap: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+
+.title {
+  font-family: var(--fuente-encabezado);
+}
+
+.paragraph {
+  font-family: var(--fuente-principal);
+}
+
+.span {
+  color: var(--color-acento-2);
+}
