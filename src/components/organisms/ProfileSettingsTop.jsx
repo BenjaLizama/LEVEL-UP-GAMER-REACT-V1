@@ -8,12 +8,12 @@ export default function ProfileSettingsTop() {
     <div className={styles.container}>
       <Icon icon={ICONS_SOLID.usuario} size={"120"} />
       <h1>¡Bienvenido!</h1>
-      <span>
+      <span className={styles.spanText}>
         ¡Los usuarios que han iniciado sesión pueden hacer más! Inicia sesión
         ahora!
       </span>
       <div className={styles.containerButton}>
-        <Button text={"Iniciar Sesión"} />
+        <Button className={styles.button} text={"Iniciar Sesión"} />
       </div>
     </div>
   );

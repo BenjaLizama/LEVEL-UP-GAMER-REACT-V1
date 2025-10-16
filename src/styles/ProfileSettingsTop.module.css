@@ -11,6 +11,11 @@
   background-color: var(--color-fondo);
 }
 
+.spanText {
+  font-size: 20px;
+  padding: 0rem 2rem;
+}
+
 .containerButton {
   width: 70%;
 }

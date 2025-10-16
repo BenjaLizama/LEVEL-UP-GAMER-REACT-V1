@@ -8,6 +8,8 @@
   background-color: var(--color-acento-1);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
 }
 
 .btn:hover {
