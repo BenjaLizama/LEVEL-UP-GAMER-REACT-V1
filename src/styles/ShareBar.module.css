@@ -1,3 +1,49 @@
 .container {
-  background-color: red;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #043668;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  column-gap: 0.4rem;
+  box-shadow: 2px 1px 8px 1px #000000;
+  animation: appear 0.2s ease forwards;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+}
+
+.icon:nth-child(1):hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  border-radius: 8px;
+}
+
+.icon:nth-child(2):hover {
+  background: linear-gradient(45deg, #25d366 0%, #128c7e 100%);
+  border-radius: 8px;
+}
+
+.icon:nth-child(3):hover {
+  background: linear-gradient(45deg, #1877f2 0%, #0f5ac9 100%);
+  border-radius: 8px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

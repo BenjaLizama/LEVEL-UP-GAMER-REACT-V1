@@ -22,10 +22,15 @@
   row-gap: 0.2rem;
 }
 
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
 .userInfo {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 95%;
   column-gap: 0.4rem;
 }
 
@@ -48,18 +53,6 @@
   font-size: 0.9rem;
   white-space: pre-line;
   width: 100%;
-}
-
-.imageContent {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0.5rem;
-  margin-top: 0.5rem;
-  box-shadow: 1px 2px 6px 1px #000000cf;
 }
 
 .buttons {

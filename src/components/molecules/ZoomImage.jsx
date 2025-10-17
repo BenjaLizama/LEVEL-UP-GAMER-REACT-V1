@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../../styles/ZoomImage.module.css";
 
 export default function ZoomImage({ src, alt }) {
   const [open, setOpen] = useState(false);
@@ -7,8 +8,8 @@ export default function ZoomImage({ src, alt }) {
       <img
         src={src}
         alt={alt}
-        style={{ cursor: "pointer", maxWidth: "100%" }}
         onClick={() => setOpen(true)}
+        className={styles.imageContent}
       />
       {open && (
         <div
@@ -31,6 +32,7 @@ export default function ZoomImage({ src, alt }) {
             src={src}
             alt={alt}
             style={{ maxHeight: "90%", maxWidth: "90%" }}
+            className={styles.imageOpen}
           />
         </div>
       )}

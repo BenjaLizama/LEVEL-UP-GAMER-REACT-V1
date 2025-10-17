@@ -28,10 +28,12 @@ export default function Publication({
         }}
       ></div>
       <div className={styles.publicationContainer}>
-        <div className={styles.userInfo}>
-          <span className={styles.name}>{name}</span>
-          <span className={styles.userName}>{"@" + userName}</span>
-          <span className={styles.date}>{date}</span>
+        <div className={styles.top}>
+          <div className={styles.userInfo}>
+            <span className={styles.name}>{name}</span>
+            <span className={styles.userName}>{"@" + userName}</span>
+            <span className={styles.date}>{date}</span>
+          </div>
           <ToolTip
             children={<SimpleIcon icon={ICONS_SOLID.compartir} />}
             content={<ShareBar />}
