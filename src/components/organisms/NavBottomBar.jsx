@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Icon from "../atoms/Icon";
-import { ICONS_SOLID, ICONS_REGULAR } from "../../assets/utils/icons";
+import { ICONS_SOLID } from "../../assets/utils/icons";
 import styles from "../../styles/NavBottomBar.module.css";
 import { useState } from "react";
+import SimpleIcon from "../atoms/SimpleIcon";
 
 export default function NavBottomBar() {
   const [selected, setSelected] = useState(0);
@@ -23,7 +23,7 @@ export default function NavBottomBar() {
           className={selected === index ? styles.selected : styles.navButton}
           onClick={() => setSelected(index)}
         >
-          <Icon icon={link.icon} />
+          <SimpleIcon icon={link.icon} />
           <span>{link.label}</span>
         </Link>
       ))}
