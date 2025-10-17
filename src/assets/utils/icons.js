@@ -13,10 +13,16 @@ import {
   faShop as faShopSolid,
   faCartShopping as faCartShoppingSolid,
   faUpRightFromSquare as faUpRightFromSquareSolid,
+  faComment as faCommentSolid,
+  faRetweet as faRetweetSolid,
+  faChartSimple as faChartSimpleSolid,
+  faShareFromSquare as faShareFromSquareSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
   faFileLines as fileLinesRegular,
+  faComment as faCommentRegular,
+  faShareFromSquare as faShareFromSquareRegular,
 } from "@fortawesome/free-regular-svg-icons";
 
 export const ICONS_SOLID = {
@@ -34,9 +40,15 @@ export const ICONS_SOLID = {
   shop: faShopSolid,
   cart: faCartShoppingSolid,
   link: faUpRightFromSquareSolid,
+  comentario: faCommentSolid,
+  retweet: faRetweetSolid,
+  barra: faChartSimpleSolid,
+  compartir: faShareFromSquareSolid,
 };
 
 export const ICONS_REGULAR = {
   corazon: faHeartRegular,
   archivo: fileLinesRegular,
+  comentario: faCommentRegular,
+  compartir: faShareFromSquareRegular,
 };
