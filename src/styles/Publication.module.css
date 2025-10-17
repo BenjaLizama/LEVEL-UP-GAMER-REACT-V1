@@ -59,9 +59,12 @@
   display: flex;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .hashtag {
   cursor: pointer;
   font-family: var(--fuente-principal);
   color: var(--color-acento-1);
 }
+=======
+>>>>>>> 5dd213b29178a5a3f29d33df00dcc7e51fd9eddb
