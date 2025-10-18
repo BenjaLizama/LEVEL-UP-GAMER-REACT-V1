@@ -4,10 +4,9 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-
   color: var(--color-texto-principal);
-  width: 20rem;
-  height: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 1rem;
   position: relative;
   transition: transform 0.5s ease;
@@ -15,37 +14,46 @@
 
 .title {
   font-family: var(--fuente-encabezado);
-  word-break: break-all;
   justify-content: flex-start;
   align-self: flex-start;
   font-size: 1.2rem;
 }
 
 .desc {
+  display: flex;
   font-family: var(--fuente-principal);
   opacity: 0;
   transition: 0.3s ease;
   width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 5% 5%;
+  box-sizing: border-box;
 }
 
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+}
 .card:hover {
   transform: scale(1.01);
 }
 
 .card:hover .desc {
   opacity: 1;
-}
-.card:hover .img {
-  background-blend-mode: darken;
+  background-color: #000000a7;
 }
 
-.img {
-  background-image: var(--img-bg);
-  background-position: center;
-  background-size: cover;
-  background-color: dimgrey;
-  background-size: 20rem;
-  width: 100%;
-  height: 10rem;
-  background-repeat: no-repeat;
+.card:hover .img {
 }
