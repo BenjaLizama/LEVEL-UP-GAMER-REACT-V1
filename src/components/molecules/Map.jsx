@@ -1,9 +1,15 @@
 import React from "react";
-import Styles from "../../styles/Map.module.css";
+import styles from "../../styles/Map.module.css";
+
 export default function Map({ mapa }) {
   return (
-    <div className="">
-      <iframe src={mapa} frameborder=" 0"></iframe>
+    <div>
+      <iframe
+        className={styles.mapa}
+        src={mapa}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   );
 }
