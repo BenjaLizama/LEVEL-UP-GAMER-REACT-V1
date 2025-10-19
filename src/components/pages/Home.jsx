@@ -23,27 +23,10 @@ export default function Home() {
 
       <div className={styles.second}>
         <Title text={"Guías de videojuegos"} />
-        <Guia
-          CardTitle={GUIAS_INFO.guide1.CardTitle}
-          CardImage={GUIAS_INFO.guide1.CardImage}
-        />
         <div className={styles.guias}>
-          <Guia
-            CardTitle={GUIAS_INFO.guide2.CardTitle}
-            CardImage={GUIAS_INFO.guide2.CardImage}
-          />
-          <Guia
-            CardTitle={GUIAS_INFO.guide3.CardTitle}
-            CardImage={GUIAS_INFO.guide3.CardImage}
-          />
-          <Guia
-            CardTitle={GUIAS_INFO.guide4.CardTitle}
-            CardImage={GUIAS_INFO.guide4.CardImage}
-          />
-          <Guia
-            CardTitle={GUIAS_INFO.guide5.CardTitle}
-            CardImage={GUIAS_INFO.guide5.CardImage}
-          />
+          {Object.values(GUIAS_INFO).map((n, i) => (
+            <Guia key={i} {...n} />
+          ))}
         </div>
       </div>
 
