@@ -14,12 +14,7 @@ export default function Publication({
   userName = "Username",
   profileImage = URL.profileImage,
   date = "3h",
-  textContent = `D’Angelo who wrote and performed Red Dead Redemption 2’s iconic soundtrack “Unshaken” has sadly passed away at 51.
-
-  #test
-  #test2
-
-  According to a source, he loved #test3 the game so much that he used to visit Rockstar’s office just to play it for hours before launch.`,
+  textContent = "#textContent",
   imageContent,
 }) {
   const regex = /(#\w+)/g;
@@ -51,7 +46,6 @@ export default function Publication({
           />
         </div>
         <div className={styles.content}>
-<<<<<<< HEAD
           <p>
             {partes.map((parte, i) => {
               if (regex.test(parte)) {
@@ -64,9 +58,6 @@ export default function Publication({
               return parte;
             })}
           </p>
-=======
-          {textContent}
->>>>>>> feature/tweets
           {imageContent && (
             <ZoomImage
               src={imageContent}

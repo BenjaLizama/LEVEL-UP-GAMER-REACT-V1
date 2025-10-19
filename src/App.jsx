@@ -10,17 +10,19 @@ import Test from "./components/pages/Test";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Banner />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/marketplace" element={<Marketplace />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/test" element={<Test />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/test" element={<Test />} />
+        </Routes>
+      </main>
       <NavBottomBar />
-    </>
+    </div>
   );
 }
 

@@ -21,14 +21,42 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.first,
+.second,
+.darkBackground,
+.third,
+.fourth,
+.top,
+.guias {
+  min-width: 0;
 }
 
 body {
-  min-width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
-  display: grid;
-  grid-template-rows: 1fr 0.1fr;
   background-color: var(--background-color-2);
+  margin-bottom: 10rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App {
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 hr {
