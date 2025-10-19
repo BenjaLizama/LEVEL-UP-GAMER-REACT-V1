@@ -1,0 +1,4 @@
+const mapas = {
+  mapa1:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425452.26589084946!2d-70.67714400000001!3d-33.583352000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d99f1bd53089%3A0x9ecde627bb52b336!2sLas%20Guatonas%20Con%20Mo%C3%B1o!5e0!3m2!1ses-419!2scl!4v1760901559790!5m2!1ses-419!2scl",
+};
