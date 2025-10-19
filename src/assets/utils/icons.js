@@ -17,6 +17,8 @@ import {
   faRetweet as faRetweetSolid,
   faChartSimple as faChartSimpleSolid,
   faShareFromSquare as faShareFromSquareSolid,
+  faChevronRight as faChevronRightSolid,
+  faChevronLeft as faChevronLeftSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -44,6 +46,8 @@ export const ICONS_SOLID = {
   retweet: faRetweetSolid,
   barra: faChartSimpleSolid,
   compartir: faShareFromSquareSolid,
+  next: faChevronRightSolid,
+  prev: faChevronLeftSolid,
 };
 
 export const ICONS_REGULAR = {
