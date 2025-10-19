@@ -11,6 +11,7 @@ import { CAROUSEL_IMAGES } from "../templates/CarouselImages";
 import { GUIAS_INFO } from "../templates/GuiasInfo";
 import { NOTICES_DATA } from "../templates/NoticesData";
 import { VOTE_CARD } from "../templates/VoteCardData";
+import SpotLightBorder from "../atoms/SpotLightBorder";
 
 export default function Home() {
   return (
@@ -47,62 +48,24 @@ export default function Home() {
       </div>
 
       <div className={styles.darkBackground}>
-        <div className={styles.third}>
-          <Title text={"Ultimas noticias"} />
-          <Publication
-            name={NOTICES_DATA.user1.name}
-            userName={NOTICES_DATA.user1.userName}
-            profileImage={NOTICES_DATA.user1.profileImage}
-            date={NOTICES_DATA.user1.date}
-            textContent={NOTICES_DATA.user1.textContent}
-            imageContent={NOTICES_DATA.user1.imageContent}
-          />
-          <Publication
-            name={NOTICES_DATA.user2.name}
-            userName={NOTICES_DATA.user2.userName}
-            profileImage={NOTICES_DATA.user2.profileImage}
-            date={NOTICES_DATA.user2.date}
-            textContent={NOTICES_DATA.user2.textContent}
-            imageContent={NOTICES_DATA.user2.imageContent}
-          />
-          <Publication
-            name={NOTICES_DATA.user3.name}
-            userName={NOTICES_DATA.user3.userName}
-            profileImage={NOTICES_DATA.user3.profileImage}
-            date={NOTICES_DATA.user3.date}
-            textContent={NOTICES_DATA.user3.textContent}
-            imageContent={NOTICES_DATA.user3.imageContent}
-          />
-        </div>
-        <div className={styles.fourth}>
-          <Title text={"Top juegos"} />
-          <div className={styles.top}>
-            <VoteCard
-              gameImage={VOTE_CARD.card1.gameImage}
-              name={VOTE_CARD.card1.name}
-            />
-            <VoteCard
-              gameImage={VOTE_CARD.card2.gameImage}
-              name={VOTE_CARD.card2.name}
-            />
-            <VoteCard
-              gameImage={VOTE_CARD.card3.gameImage}
-              name={VOTE_CARD.card3.name}
-            />
-            <VoteCard
-              gameImage={VOTE_CARD.card4.gameImage}
-              name={VOTE_CARD.card4.name}
-            />
-            <VoteCard
-              gameImage={VOTE_CARD.card5.gameImage}
-              name={VOTE_CARD.card5.name}
-            />
-            <VoteCard
-              gameImage={VOTE_CARD.card6.gameImage}
-              name={VOTE_CARD.card6.name}
-            />
+        <SpotLightBorder>
+          <div className={styles.third}>
+            <Title text="Últimas noticias" />
+            {Object.values(NOTICES_DATA).map((n, i) => (
+              <Publication key={i} {...n} />
+            ))}
           </div>
-        </div>
+        </SpotLightBorder>
+        <SpotLightBorder>
+          <div className={styles.fourth}>
+            <div className={styles.top}>
+              <Title text={"Top juegos"} />
+              {Object.values(VOTE_CARD).map((n, i) => (
+                <VoteCard key={i} {...n} />
+              ))}
+            </div>
+          </div>
+        </SpotLightBorder>
       </div>
       <div className={styles.fifth}>
         <AboutUs />

@@ -33,8 +33,7 @@
   flex-direction: column;
   row-gap: 1rem;
   background: #121212;
-  padding: 2rem;
-  border: 2px solid var(--color-acento-1);
+  padding: 1rem;
   border-radius: 2rem;
 }
 
@@ -44,7 +43,6 @@
   row-gap: 1rem;
   background-color: #121212;
   padding: 1rem;
-  border: 2px solid var(--color-acento-1);
   border-radius: 2rem;
 }
 
