@@ -7,6 +7,7 @@
   align-items: center;
   background-color: #01010170;
   backdrop-filter: blur(4px);
+  z-index: 1001;
 }
 
 .navButton {

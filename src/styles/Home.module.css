@@ -8,15 +8,13 @@
 }
 
 .second {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding: 1rem;
   row-gap: 2rem;
 }
 
 .guias {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
@@ -80,17 +78,21 @@ svg {
   overflow-wrap: anywhere;
 }
 
-@media (max-width: 420px) {
-  .first {
-    padding: 2.5rem 0.5rem;
+@media (min-width: 720px) {
+  .second {
+    display: grid;
+    padding: 1rem;
+    row-gap: 2rem;
   }
-  .second,
-  .darkBackground,
-  .third,
-  .fourth {
-    padding: 0.75rem;
+
+  .guias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 1rem;
   }
-  :root {
-    --gap: 0.5rem;
+
+  .guias > :first-child {
+    grid-column: 1 / -1;
   }
 }

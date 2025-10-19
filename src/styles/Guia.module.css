@@ -11,6 +11,7 @@
   position: relative;
   transition: transform 0.5s ease;
   row-gap: 0.5rem;
+  will-change: transform;
 }
 
 .title {
@@ -50,7 +51,7 @@
   position: relative;
 }
 .card:hover {
-  transform: scale(1.01);
+  transform: scale(1.01) translateY(0);
 }
 
 .card:hover .desc {
