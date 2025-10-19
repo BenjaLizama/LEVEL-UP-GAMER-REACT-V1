@@ -51,6 +51,7 @@ export default function Publication({
           />
         </div>
         <div className={styles.content}>
+<<<<<<< HEAD
           <p>
             {partes.map((parte, i) => {
               if (regex.test(parte)) {
@@ -63,6 +64,9 @@ export default function Publication({
               return parte;
             })}
           </p>
+=======
+          {textContent}
+>>>>>>> feature/tweets
           {imageContent && (
             <ZoomImage
               src={imageContent}
