@@ -17,11 +17,8 @@ import {
   faRetweet as faRetweetSolid,
   faChartSimple as faChartSimpleSolid,
   faShareFromSquare as faShareFromSquareSolid,
-<<<<<<< HEAD
   faChevronRight as faChevronRightSolid,
   faChevronLeft as faChevronLeftSolid,
-=======
->>>>>>> feature/tweets
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
