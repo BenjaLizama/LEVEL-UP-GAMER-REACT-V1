@@ -2,11 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/SettingsOption.module.css";
 import { useState } from "react";
 
-export default function SettingsOption({ text, icon, children }) {
+export default function SettingsOption({ text, icon, children, className }) {
   const [open, setOpen] = useState(false);
 
   if (open) {
-    var content = <div className={styles.content}>{children}</div>;
+    var content = (
+      <div className={className ? className : styles.content}>{children}</div>
+    );
   } else {
     var content = <div></div>;
   }
@@ -14,7 +16,9 @@ export default function SettingsOption({ text, icon, children }) {
   return (
     <>
       <div
-        className={`${styles.container} ${open ? styles.active : ""}`}
+        className={`${styles.container} ${open ? styles.active : ""} ${
+          className || ""
+        }`}
         onClick={() => {
           setOpen(!open);
         }}
