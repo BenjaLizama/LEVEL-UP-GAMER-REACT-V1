@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import styles from "../../styles/Product.module.css";
 
 export default function Product({
+  id = null,
   sealer = "Vendedor",
   productName = "Nombre del producto",
   price = 0,
@@ -16,30 +18,34 @@ export default function Product({
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <img
-          src="../../../public/images/NoImage.webp"
-          alt="Imagen del producto"
-          className={styles.img}
-        />
-      </div>
-      <div className={styles.info}>
-        <span className={styles.pOwner}>{sealer}</span>
-        <span className={styles.pName}>{productName}</span>
-        <div className={styles.pDiscount}>
-          {boolDesct ? (
-            <>
-              <span className={styles.priceDiscount}>{discountPer}% DCTO.</span>
-              <span className={styles.priceThrough}>${price}</span>
-            </>
-          ) : (
-            <>&nbsp;</>
-          )}
+    <Link to={`/product/${id}`} className={styles.Link}>
+      <div className={styles.container}>
+        <div className={styles.imgContainer}>
+          <img
+            src="/images/NoImage.webp"
+            alt="Imagen del producto"
+            className={styles.img}
+          />
         </div>
-        <span className={styles.pCuotes}></span>
-        <span className={styles.pPrice}>${finalPrice}</span>
+        <div className={styles.info}>
+          <span className={styles.pOwner}>{sealer}</span>
+          <span className={styles.pName}>{productName}</span>
+          <div className={styles.pDiscount}>
+            {boolDesct ? (
+              <>
+                <span className={styles.priceDiscount}>
+                  {discountPer}% DCTO.
+                </span>
+                <span className={styles.priceThrough}>${price}</span>
+              </>
+            ) : (
+              <>&nbsp;</>
+            )}
+          </div>
+          <span className={styles.pCuotes}></span>
+          <span className={styles.pPrice}>${finalPrice}</span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
