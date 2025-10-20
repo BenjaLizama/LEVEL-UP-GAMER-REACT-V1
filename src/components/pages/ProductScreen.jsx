@@ -5,6 +5,7 @@ import SimpleIcon from "../atoms/SimpleIcon";
 import { useParams } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
 import SettingsOption from "../molecules/SettingsOption";
+import Footer from "../organisms/Footer";
 
 export default function ProductScreen() {
   const { id } = useParams();
@@ -75,6 +76,9 @@ export default function ProductScreen() {
             </div>
           </SettingsOption>
         </div>
+      </div>
+      <div className={styles.footer}>
+        <Footer />
       </div>
     </div>
   );
