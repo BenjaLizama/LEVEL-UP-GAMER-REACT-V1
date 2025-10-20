@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
 import styles from "../../styles/NavBottomBar.module.css";
-import { useState } from "react";
 import SimpleIcon from "../atoms/SimpleIcon";
 
 export default function NavBottomBar() {
-  const [selected, setSelected] = useState(0);
+  const location = useLocation();
 
   const links = [
     { path: "/", icon: ICONS_SOLID.home, label: "Inicio" },
@@ -16,17 +15,23 @@ export default function NavBottomBar() {
 
   return (
     <nav className={styles.navbar}>
-      {links.map((link, index) => (
-        <Link
-          key={index}
-          to={link.path}
-          className={selected === index ? styles.selected : styles.navButton}
-          onClick={() => setSelected(index)}
-        >
-          <SimpleIcon icon={link.icon} />
-          <span>{link.label}</span>
-        </Link>
-      ))}
+      {links.map((link, index) => {
+        const isActive =
+          link.path === "/"
+            ? location.pathname === link.path
+            : location.pathname.startsWith(link.path);
+
+        return (
+          <Link
+            key={index}
+            to={link.path}
+            className={isActive ? styles.selected : styles.navButton}
+          >
+            <SimpleIcon icon={link.icon} />
+            <span>{link.label}</span>
+          </Link>
+        );
+      })}
     </nav>
   );
 }
