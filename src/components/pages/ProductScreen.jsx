@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import SimpleIcon from "../atoms/SimpleIcon";
 import { useParams } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
+import SettingsOption from "../molecules/SettingsOption";
 
 export default function ProductScreen() {
   const { id } = useParams();
+  const classNameStyles = [styles.arrowIcon, styles.settingOption];
 
   return (
     <div className={styles.main}>
@@ -56,6 +58,22 @@ export default function ProductScreen() {
             <button className={styles.buttonSecondary}>Agregar al carro</button>
             <button className={styles.buttonPrimary}>Comprar ahora</button>
           </div>
+        </div>
+        <div className={styles.containerDescription}>
+          <SettingsOption className={styles.test} text={"Descripción"}>
+            <div className={styles.description}>
+              <span className={styles.descriptionTitle}>
+                Nombre del producto
+              </span>
+              <span className={styles.descriptionText}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                vitae ut, accusamus corrupti temporibus minus laudantium velit
+                vel inventore nemo! Nesciunt, eum quibusdam. Impedit aliquam
+                voluptas veniam tempore enim voluptatum totam pariatur deleniti
+                quo. Id consequuntur doloribus autem nostrum vero!
+              </span>
+            </div>
+          </SettingsOption>
         </div>
       </div>
     </div>

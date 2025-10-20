@@ -189,3 +189,37 @@
 .buttonPrimary:hover {
   background-color: var(--color-acento-1-hover);
 }
+
+.containerDescription {
+  padding: 1rem;
+}
+
+.test {
+  background-color: #121212;
+}
+
+.test:hover {
+  background-color: #121212;
+}
+
+.test .active {
+  background-color: #121212;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  row-gap: 1rem;
+}
+
+.descriptionTitle {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.descriptionText {
+  font-size: 1.3rem;
+}
