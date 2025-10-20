@@ -2,12 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/SimpleIcon.module.css";
 
 export default function SimpleIcon({ icon, size, color, boolShadow }) {
-  let active = "";
-
   if (boolShadow == true) {
-    let active = styles.iconShadow;
+    var active = styles.iconShadow;
   } else {
-    let active = null;
+    var active = null;
   }
   return (
     <FontAwesomeIcon

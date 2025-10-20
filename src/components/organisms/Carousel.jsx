@@ -17,7 +17,7 @@ export default function Carousel({ listImages = [] }) {
   return (
     <div className={styles.container}>
       <button className={styles.btnPrev} onClick={prev}>
-        <SimpleIcon icon={ICONS_SOLID.prev} className={styles.icon} />
+        <SimpleIcon icon={ICONS_SOLID.prev} boolShadow={true} />
       </button>
 
       <div className={styles.carousel}>
@@ -32,7 +32,7 @@ export default function Carousel({ listImages = [] }) {
       </div>
 
       <button className={styles.btnNext} onClick={next}>
-        <SimpleIcon icon={ICONS_SOLID.next} />
+        <SimpleIcon icon={ICONS_SOLID.next} boolShadow={true} />
       </button>
     </div>
   );
