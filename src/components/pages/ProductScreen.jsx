@@ -6,44 +6,71 @@ import { useParams } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
 import SettingsOption from "../molecules/SettingsOption";
 import Footer from "../organisms/Footer";
+import { PRODUCT_DATA } from "../templates/ProductData";
+import { formatoCLP } from "../../assets/utils/format";
 
 export default function ProductScreen() {
   const { id } = useParams();
-  const classNameStyles = [styles.arrowIcon, styles.settingOption];
+
+  const product = PRODUCT_DATA.find((p) => p.id === id);
+
+  if (!product) {
+    return (
+      <div className={styles.notFound}>
+        <h1>Producto no encontrado</h1>
+      </div>
+    );
+  }
+
+  const sealer = product.sealer;
+  const productName = product.productName;
+  const price = product.price;
+  const discountPer = product.discountPer;
+  const boolDesct = product.boolDesct;
+  var image = product.image;
+  var finalPrice;
+
+  if (!image) {
+    image = "/images/NoImage.webp";
+  }
+
+  if (boolDesct) {
+    finalPrice = Math.round(price - (price * discountPer) / 100);
+  }
 
   return (
     <div className={styles.main}>
-      <Link to="/marketplace" className={styles.prev}>
-        <SimpleIcon icon={ICONS_SOLID.prev} size={1} />
-        <span className={styles.prevText}>Tienda</span>
-      </Link>
+      <div className={styles.prev}>
+        <Link to="/marketplace" className={styles.Link}>
+          <SimpleIcon icon={ICONS_SOLID.prev} size={1} />
+          <span className={styles.prevText}>Tienda</span>
+        </Link>
+      </div>
       <div className={styles.container}>
         <div className={styles.arrive}>
           <span className={styles.arriveText}>LLEGA HOY</span>
         </div>
         <div className={styles.info}>
-          <span className={styles.pName}>Nombre del producto</span>
-          <span className={styles.pOwner}>Vendedor</span>
+          <span className={styles.pName}>{productName}</span>
+          <span className={styles.pOwner}>{sealer}</span>
         </div>
         <div className={styles.imgContainer}>
-          <img
-            src="../../../public/images/NoImage.webp"
-            alt="Imagen del producto"
-            className={styles.img}
-          />
+          <img src={image} alt="Imagen del producto" className={styles.img} />
         </div>
         <div className={styles.pricesContainer}>
           <div className={styles.textParallel}>
             <span className={styles.nText}>Normal</span>
-            <span className={styles.oldPrice}>$0</span>
+            <span className={styles.oldPrice}>{formatoCLP(price)}</span>
           </div>
           <div className={styles.textParallel}>
             <span className={styles.nText}>Descuento</span>
-            <span className={styles.desctPerc}>0% DCTO.</span>
+            <span className={styles.desctPerc}>
+              {product.discountPer}% DCTO.
+            </span>
           </div>
           <div className={styles.textParallel}>
             <span className={styles.finalPrice}>Pago con transferencia</span>
-            <span className={styles.finalPrice}>$0</span>
+            <span className={styles.finalPrice}>{formatoCLP(finalPrice)}</span>
           </div>
           <div className={styles.stockContainer}>
             <div className={styles.align}>

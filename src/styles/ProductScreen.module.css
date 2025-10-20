@@ -1,3 +1,10 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-texto-principal);
+}
+
 .main {
   padding: 1rem;
   background-color: #121212;
@@ -26,6 +33,10 @@
 }
 
 .prev {
+  width: 100px;
+}
+
+.Link {
   display: flex;
   align-items: center;
   color: var(--color-acento-1);

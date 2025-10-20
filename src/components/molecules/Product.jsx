@@ -8,6 +8,7 @@ export default function Product({
   price = 0,
   discountPer = 0,
   boolDesct = false,
+  image = "/images/NoImage.webp",
 }) {
   let priceDscto = 0;
   let finalPrice = price;
@@ -21,11 +22,7 @@ export default function Product({
     <Link to={`/product/${id}`} className={styles.Link}>
       <div className={styles.container}>
         <div className={styles.imgContainer}>
-          <img
-            src="/images/NoImage.webp"
-            alt="Imagen del producto"
-            className={styles.img}
-          />
+          <img src={image} alt="Imagen del producto" className={styles.img} />
         </div>
         <div className={styles.info}>
           <span className={styles.pOwner}>{sealer}</span>
