@@ -26,7 +26,9 @@ export default function ProductScreen() {
   const productName = product.productName;
   const price = product.price;
   const discountPer = product.discountPer;
-  const boolDesct = product.boolDesct;
+  const boolDesct = false;
+  const description = product.description;
+  const categorie = product.categorie;
   var image = product.image;
   var finalPrice;
 
@@ -35,7 +37,84 @@ export default function ProductScreen() {
   }
 
   if (boolDesct) {
-    finalPrice = Math.round(price - (price * discountPer) / 100);
+    var finalPrice = Math.round(price - (price * discountPer) / 100);
+    var finalTransferPrice =
+      Math.round(price - (price * discountPer) / 100) - 3500;
+  } else {
+    var finalTransferPrice = price - 3500;
+    var finalPrice = price;
+  }
+
+  if (boolDesct) {
+    var discount = (
+      <>
+        <div className={styles.textParallel}>
+          <span className={styles.nText}>Normal</span>
+          <span className={styles.oldPrice}>{formatoCLP(price)}</span>
+        </div>
+        <div className={styles.textParallel}>
+          <span className={styles.nText}>Descuento</span>
+          <span className={styles.desctPerc}>{discountPer}% DCTO.</span>
+        </div>
+        <div className={styles.textParallel}>
+          <span className={styles.finalPrice}>Pago con transferencia</span>
+          <span className={styles.finalPrice}>
+            {formatoCLP(finalTransferPrice)}
+          </span>
+        </div>
+        <div className={styles.textParallel}>
+          <span className={styles.finalNormalPrice}>Pago normal</span>
+          <span className={styles.finalNormalPrice}>
+            {formatoCLP(finalPrice)}
+          </span>
+        </div>
+        <div className={styles.stockContainer}>
+          <div className={styles.align}>
+            <SimpleIcon
+              icon={ICONS_SOLID.cart}
+              color={"var(--color-texto-principal)"}
+            />
+            <span className={styles.stockText}>Stock disponible</span>
+          </div>
+          <span className={styles.stock}>Más de {20} unidades</span>
+        </div>
+        <div className={styles.buttons}>
+          <button className={styles.buttonSecondary}>Agregar al carro</button>
+          <button className={styles.buttonPrimary}>Comprar ahora</button>
+        </div>
+      </>
+    );
+  } else {
+    var discount = (
+      <>
+        <div className={styles.textParallel}>
+          <span className={styles.finalPrice}>Pago con transferencia</span>
+          <span className={styles.finalPrice}>
+            {formatoCLP(finalTransferPrice)}
+          </span>
+        </div>
+        <div className={styles.textParallel}>
+          <span className={styles.finalNormalPrice}>Otros medios de pago</span>
+          <span className={styles.finalNormalPrice}>
+            {formatoCLP(finalPrice)}
+          </span>
+        </div>
+        <div className={styles.stockContainer}>
+          <div className={styles.align}>
+            <SimpleIcon
+              icon={ICONS_SOLID.cart}
+              color={"var(--color-texto-principal)"}
+            />
+            <span className={styles.stockText}>Stock disponible</span>
+          </div>
+          <span className={styles.stock}>Más de {20} unidades</span>
+        </div>
+        <div className={styles.buttons}>
+          <button className={styles.buttonSecondary}>Agregar al carro</button>
+          <button className={styles.buttonPrimary}>Comprar ahora</button>
+        </div>
+      </>
+    );
   }
 
   return (
@@ -57,49 +136,16 @@ export default function ProductScreen() {
         <div className={styles.imgContainer}>
           <img src={image} alt="Imagen del producto" className={styles.img} />
         </div>
-        <div className={styles.pricesContainer}>
-          <div className={styles.textParallel}>
-            <span className={styles.nText}>Normal</span>
-            <span className={styles.oldPrice}>{formatoCLP(price)}</span>
-          </div>
-          <div className={styles.textParallel}>
-            <span className={styles.nText}>Descuento</span>
-            <span className={styles.desctPerc}>
-              {product.discountPer}% DCTO.
-            </span>
-          </div>
-          <div className={styles.textParallel}>
-            <span className={styles.finalPrice}>Pago con transferencia</span>
-            <span className={styles.finalPrice}>{formatoCLP(finalPrice)}</span>
-          </div>
-          <div className={styles.stockContainer}>
-            <div className={styles.align}>
-              <SimpleIcon
-                icon={ICONS_SOLID.cart}
-                color={"var(--color-texto-principal)"}
-              />
-              <span className={styles.stockText}>Stock disponible</span>
-            </div>
-            <span className={styles.stock}>Más de {20} unidades</span>
-          </div>
-          <div className={styles.buttons}>
-            <button className={styles.buttonSecondary}>Agregar al carro</button>
-            <button className={styles.buttonPrimary}>Comprar ahora</button>
-          </div>
+        <div className={styles.pricesContainer}>{discount}</div>
+        <div className={styles.containerCategorie}>
+          <span className={styles.categorieText}>Categoria:</span>
+          <span className={styles.categorie}>{categorie}</span>
         </div>
         <div className={styles.containerDescription}>
           <SettingsOption className={styles.test} text={"Descripción"}>
             <div className={styles.description}>
-              <span className={styles.descriptionTitle}>
-                Nombre del producto
-              </span>
-              <span className={styles.descriptionText}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
-                vitae ut, accusamus corrupti temporibus minus laudantium velit
-                vel inventore nemo! Nesciunt, eum quibusdam. Impedit aliquam
-                voluptas veniam tempore enim voluptatum totam pariatur deleniti
-                quo. Id consequuntur doloribus autem nostrum vero!
-              </span>
+              <span className={styles.descriptionTitle}>{productName}</span>
+              <span className={styles.descriptionText}>{description}</span>
             </div>
           </SettingsOption>
         </div>

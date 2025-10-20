@@ -105,6 +105,11 @@
   color: #b5b5b5;
 }
 
+.normalPrice {
+  font-family: var(--fuente-principal);
+  color: #b5b5b5;
+}
+
 .desctPerc {
   font-family: var(--fuente-principal);
   font-weight: 600;
@@ -123,6 +128,15 @@
   max-width: 15rem;
 }
 
+.finalNormalPrice {
+  font-family: var(--fuente-principal);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b5b5b5;
+  flex-wrap: wrap;
+  max-width: 15rem;
+}
+
 .align {
   display: flex;
   align-items: center;
@@ -135,6 +149,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1rem;
 }
 
 .cart {
@@ -233,4 +248,23 @@
 
 .descriptionText {
   font-size: 1.3rem;
+}
+
+.containerCategorie {
+  font-family: var(--fuente-principal);
+  font-size: 1.2rem;
+  color: #056152;
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categorieText {
+  text-align: start;
+  width: 100%;
+}
+
+.categorie {
+  text-align: end;
+  width: 100%;
 }
