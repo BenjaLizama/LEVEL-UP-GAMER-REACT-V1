@@ -14,6 +14,7 @@ import Footer from "../organisms/Footer";
 import { PRODUCT_DATA } from "../data/ProductData";
 import { formatoCLP } from "../../assets/utils/format";
 import Review from "../molecules/Review";
+import ReviewTemplate from "../template/ReviewTemplate";
 
 export default function ProductScreen() {
   const { id } = useParams();
@@ -152,11 +153,7 @@ export default function ProductScreen() {
             </div>
           </SettingsOption>
           <SettingsOption className={styles.test} text={"Reseñas"}>
-            <Review
-              autor="Jhon SalchiJhon"
-              puntuation={4}
-              review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, soluta quas tempore ad, nulla ut magni repellat id eligendi amet dolorum ipsa consequuntur minus, numquam error quia optio cumque reprehenderit cum veniam nihil ipsam. Perferendis exercitationem sit pariatur vitae vel repudiandae inventore dolorem accusantium. Libero veritatis ullam rerum quod asperiores!"
-            />
+            <ReviewTemplate id={product.id} />
           </SettingsOption>
         </div>
       </div>

@@ -13,7 +13,11 @@ export const PRODUCT_DATA = [
       "Un clásico juego de estrategia donde los jugadores compiten por colonizar y expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en familia o con amigos.",
     categorie: CATEGORIES.juego_mesa,
     reviews: {
-      review1: { autor: "", puntuation: 0, review: "" },
+      review1: {
+        autor: "El chico julio",
+        puntuation: 5,
+        review: "La empanada traia caca",
+      },
     },
   },
 ];
