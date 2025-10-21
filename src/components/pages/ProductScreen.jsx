@@ -1,3 +1,8 @@
+/* Esta pagina debe ser migrada a componentes para la tercera prueba o el examen
+ * porque no cumple con los principios de Atomic Design, pero por temas de tiempo
+ * se tiene que quedar asi
+ */
+
 import React from "react";
 import styles from "../../styles/ProductScreen.module.css";
 import { Link } from "react-router-dom";
@@ -17,6 +22,7 @@ export default function ProductScreen() {
   if (!product) {
     return (
       <div className={styles.notFound}>
+        {/* Crear 404 not found para esto */}
         <h1>Producto no encontrado</h1>
       </div>
     );
@@ -26,15 +32,11 @@ export default function ProductScreen() {
   const productName = product.productName;
   const price = product.price;
   const discountPer = product.discountPer;
-  const boolDesct = false;
+  const boolDesct = product.discountPer;
   const description = product.description;
   const categorie = product.categorie;
-  var image = product.image;
+  var image = product.image || "/images/NoImage.webp";
   var finalPrice;
-
-  if (!image) {
-    image = "/images/NoImage.webp";
-  }
 
   if (boolDesct) {
     var finalPrice = Math.round(price - (price * discountPer) / 100);
