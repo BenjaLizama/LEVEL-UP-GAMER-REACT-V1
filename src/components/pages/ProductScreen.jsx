@@ -11,8 +11,10 @@ import { useParams } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
 import SettingsOption from "../molecules/SettingsOption";
 import Footer from "../organisms/Footer";
-import { PRODUCT_DATA } from "../templates/ProductData";
+import { PRODUCT_DATA } from "../data/ProductData";
 import { formatoCLP } from "../../assets/utils/format";
+import Review from "../molecules/Review";
+import ReviewTemplate from "../template/ReviewTemplate";
 
 export default function ProductScreen() {
   const { id } = useParams();
@@ -149,6 +151,9 @@ export default function ProductScreen() {
               <span className={styles.descriptionTitle}>{productName}</span>
               <span className={styles.descriptionText}>{description}</span>
             </div>
+          </SettingsOption>
+          <SettingsOption className={styles.test} text={"Reseñas"}>
+            <ReviewTemplate id={product.id} />
           </SettingsOption>
         </div>
       </div>

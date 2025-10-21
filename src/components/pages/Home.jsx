@@ -7,11 +7,11 @@ import Publication from "../organisms/Publication";
 import VoteCard from "../molecules/VoteCard";
 import AboutUs from "../organisms/AboutUs";
 import Footer from "../organisms/Footer";
-import { CAROUSEL_IMAGES } from "../templates/CarouselImages";
-import { GUIAS_INFO } from "../templates/GuiasInfo";
-import { NOTICES_DATA } from "../templates/NoticesData";
-import { VOTE_CARD } from "../templates/VoteCardData";
 import SpotLightBorder from "../atoms/SpotLightBorder";
+import { CAROUSEL_IMAGES } from "../data/CarouselImages";
+import { GUIAS_INFO } from "../data/GuiasInfo";
+import { NOTICES_DATA } from "../data/NoticesData";
+import { VOTE_CARD } from "../data/VoteCardData";
 
 export default function Home() {
   return (
