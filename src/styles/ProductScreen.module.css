@@ -1,0 +1,270 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-texto-principal);
+}
+
+.main {
+  padding: 1rem;
+  background-color: #121212;
+}
+
+.container {
+  background-color: #121212;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  box-shadow: 4px 4px 12px #000000 inset;
+}
+
+.arrive {
+  padding: 1.5rem 1.5rem;
+}
+
+.arriveText {
+  font-family: var(--fuente-principal);
+  font-weight: 900;
+  background-color: #ebfaf7;
+  color: #056152;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.prev {
+  width: 100px;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+  color: var(--color-acento-1);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.prevText {
+  font-family: var(--fuente-principal);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1.5rem;
+}
+
+.pName {
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  font-size: 2rem;
+  flex-wrap: wrap;
+}
+
+.pOwner {
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  font-size: 1.5rem;
+}
+
+.imgContainer {
+  padding: 1.5rem;
+}
+
+.img {
+  min-width: 100%;
+  height: auto;
+}
+
+.pricesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  row-gap: 0.4rem;
+}
+
+.textParallel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nText {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto-principal);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.oldPrice {
+  font-family: var(--fuente-principal);
+  text-decoration: line-through;
+  color: #b5b5b5;
+}
+
+.normalPrice {
+  font-family: var(--fuente-principal);
+  color: #b5b5b5;
+}
+
+.desctPerc {
+  font-family: var(--fuente-principal);
+  font-weight: 600;
+  background-color: #ebfaf7;
+  color: #056152;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.finalPrice {
+  font-family: var(--fuente-principal);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-acento-1);
+  flex-wrap: wrap;
+  max-width: 15rem;
+}
+
+.finalNormalPrice {
+  font-family: var(--fuente-principal);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b5b5b5;
+  flex-wrap: wrap;
+  max-width: 15rem;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.stockContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.cart {
+  color: var(--color-texto-principal);
+}
+
+.stockText {
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  font-size: 1.2rem;
+}
+
+.stock {
+  font-family: var(--fuente-principal);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #056152;
+}
+
+.buttons {
+  padding: 1rem 0rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+}
+
+.buttonSecondary {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: 2px solid var(--color-acento-1);
+  border-radius: 0.3rem;
+  background: none;
+  font-family: var(--fuente-principal);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-acento-1);
+  transition: all 0.2s ease;
+}
+
+.buttonSecondary:hover {
+  color: var(--color-acento-1-hover);
+  border: 2px solid var(--color-acento-1-hover);
+}
+
+.buttonPrimary {
+  cursor: pointer;
+  width: 100%;
+  font-family: var(--fuente-principal);
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: var(--color-acento-1);
+  color: #121212;
+  transition: all 0.2s ease;
+}
+
+.buttonPrimary:hover {
+  background-color: var(--color-acento-1-hover);
+}
+
+.containerDescription {
+  padding: 1rem;
+}
+
+.test {
+  background-color: #121212;
+}
+
+.test:hover {
+  background-color: #121212;
+}
+
+.test .active {
+  background-color: #121212;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  row-gap: 1rem;
+}
+
+.descriptionTitle {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.descriptionText {
+  font-size: 1.3rem;
+}
+
+.containerCategorie {
+  font-family: var(--fuente-principal);
+  font-size: 1.2rem;
+  color: #056152;
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categorieText {
+  text-align: start;
+  width: 100%;
+}
+
+.categorie {
+  text-align: end;
+  width: 100%;
+}
