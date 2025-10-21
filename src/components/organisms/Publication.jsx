@@ -1,7 +1,7 @@
 import React from "react";
 import { URL } from "../../assets/utils/url";
 import styles from "../../styles/Publication.module.css";
-import { publicationButtonsData } from "../templates/PublicationButtonData";
+import { publicationButtonsData } from "../data/PublicationButtonData";
 import PublicationButton from "../atoms/PublicationButton";
 import ZoomImage from "../molecules/ZoomImage";
 import ToolTip from "../molecules/ToolTip";

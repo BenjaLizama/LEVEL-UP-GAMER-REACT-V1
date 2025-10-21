@@ -11,8 +11,9 @@ import { useParams } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
 import SettingsOption from "../molecules/SettingsOption";
 import Footer from "../organisms/Footer";
-import { PRODUCT_DATA } from "../templates/ProductData";
+import { PRODUCT_DATA } from "../data/ProductData";
 import { formatoCLP } from "../../assets/utils/format";
+import Review from "../molecules/Review";
 
 export default function ProductScreen() {
   const { id } = useParams();
@@ -149,6 +150,13 @@ export default function ProductScreen() {
               <span className={styles.descriptionTitle}>{productName}</span>
               <span className={styles.descriptionText}>{description}</span>
             </div>
+          </SettingsOption>
+          <SettingsOption className={styles.test} text={"Reseñas"}>
+            <Review
+              autor="Jhon SalchiJhon"
+              puntuation={4}
+              review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, soluta quas tempore ad, nulla ut magni repellat id eligendi amet dolorum ipsa consequuntur minus, numquam error quia optio cumque reprehenderit cum veniam nihil ipsam. Perferendis exercitationem sit pariatur vitae vel repudiandae inventore dolorem accusantium. Libero veritatis ullam rerum quod asperiores!"
+            />
           </SettingsOption>
         </div>
       </div>

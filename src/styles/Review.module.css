@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  row-gap: 1rem;
+  border-radius: 0rem 0rem 0.3rem 0.3rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.puntuationContainer {
+  display: flex;
+  column-gap: 0.2rem;
+}

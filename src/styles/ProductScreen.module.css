@@ -235,10 +235,12 @@
 .description {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem 1rem;
   color: var(--color-texto-principal);
   font-family: var(--fuente-principal);
   row-gap: 1rem;
+  box-shadow: 4px 4px 12px #000000 inset;
+  border-radius: 0rem 0rem 0.3rem 0.3rem;
 }
 
 .descriptionTitle {
