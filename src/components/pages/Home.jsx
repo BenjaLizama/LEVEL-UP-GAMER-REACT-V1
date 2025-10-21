@@ -7,11 +7,13 @@ import Publication from "../organisms/Publication";
 import VoteCard from "../molecules/VoteCard";
 import AboutUs from "../organisms/AboutUs";
 import Footer from "../organisms/Footer";
+import Map from "../molecules/Map";
+import SpotLightBorder from "../atoms/SpotLightBorder";
 import { CAROUSEL_IMAGES } from "../templates/CarouselImages";
 import { GUIAS_INFO } from "../templates/GuiasInfo";
 import { NOTICES_DATA } from "../templates/NoticesData";
 import { VOTE_CARD } from "../templates/VoteCardData";
-import SpotLightBorder from "../atoms/SpotLightBorder";
+import { MAPAS } from "../templates/Maproutes";
 
 export default function Home() {
   return (
@@ -49,6 +51,12 @@ export default function Home() {
             </div>
           </div>
         </SpotLightBorder>
+      </div>
+      <div className={styles.maps}>
+        <Title text={"Encuentranos"} />
+        {Object.values(MAPAS).map((n, i) => (
+          <Map key={i} {...n} />
+        ))}
       </div>
       <div className={styles.fifth}>
         <AboutUs />
