@@ -1,10 +1,10 @@
+import styles from "../../styles/Profile.module.css";
 import ProfileSettingTop from "../organisms/ProfileSettingsTop";
 import SettingsOption from "../molecules/SettingsOption";
 import { ICONS_REGULAR, ICONS_SOLID } from "../../assets/utils/icons";
-import styles from "../../styles/Profile.module.css";
 import Footer from "../organisms/Footer";
 import SettingsContainer from "../molecules/SettingsContainer";
-import MENU_OPTIONS from "../templates/OptionsMenu";
+import MENU_OPTIONS from "../data/OptionsMenu";
 
 export default function Profile() {
   return (

@@ -3,7 +3,6 @@
   border-radius: 1rem;
   padding: 1rem;
   overflow: hidden;
-  background: #111;
 }
 
 /* Efecto del borde reactivo al mouse */
@@ -14,8 +13,8 @@
   border-radius: inherit;
   padding: 2px;
   background: radial-gradient(
-    circle 1000px at var(--x, 50%) var(--y, 50%),
-    var(--color-acento-1),
+    circle 700px at var(--x, 50%) var(--y, 50%),
+    var(--color-texto-principal),
     rgba(255, 255, 255, 0.2) 30%,
     transparent 60%
   );
