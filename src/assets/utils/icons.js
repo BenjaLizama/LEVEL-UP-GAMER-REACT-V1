@@ -20,6 +20,8 @@ import {
   faChevronRight as faChevronRightSolid,
   faChevronLeft as faChevronLeftSolid,
   faStar as faStarSolid,
+  faEnvelope as faEnvelopeSolid,
+  faXmark as faXmarkSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -50,6 +52,8 @@ export const ICONS_SOLID = {
   next: faChevronRightSolid,
   prev: faChevronLeftSolid,
   star: faStarSolid,
+  email: faEnvelopeSolid,
+  xmark: faXmarkSolid,
 };
 
 export const ICONS_REGULAR = {
