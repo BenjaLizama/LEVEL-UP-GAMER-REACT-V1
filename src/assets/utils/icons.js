@@ -22,6 +22,7 @@ import {
   faStar as faStarSolid,
   faEnvelope as faEnvelopeSolid,
   faXmark as faXmarkSolid,
+  faCartArrowDown as faCartArrowDownSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -54,6 +55,7 @@ export const ICONS_SOLID = {
   star: faStarSolid,
   email: faEnvelopeSolid,
   xmark: faXmarkSolid,
+  empty: faCartArrowDownSolid,
 };
 
 export const ICONS_REGULAR = {
