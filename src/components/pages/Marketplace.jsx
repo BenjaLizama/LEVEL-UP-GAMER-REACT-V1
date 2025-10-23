@@ -1,5 +1,10 @@
 import React from "react";
+import ProductosTemplate from "../template/ProductosTemplate";
 
 export default function Marketplace() {
-  return <div>Marketplace</div>;
+  return (
+    <div>
+      <ProductosTemplate />
+    </div>
+  );
 }
