@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../../styles/Product.module.css";
+import { formatoCLP } from "../../assets/utils/format";
 
 export default function Product({
   id = null,
@@ -7,13 +8,13 @@ export default function Product({
   productName = "Nombre del producto",
   price = 0,
   discountPer = 0,
-  boolDesct = false,
   image = "/images/NoImage.webp",
+  precioFinal,
 }) {
   let priceDscto = 0;
   let finalPrice = price;
 
-  if (boolDesct && discountPer > 0 && discountPer < 100) {
+  if (discountPer > 0 && discountPer < 100) {
     priceDscto = price * (discountPer / 100);
     finalPrice = price - priceDscto;
   }
@@ -28,19 +29,19 @@ export default function Product({
           <span className={styles.pOwner}>{sealer}</span>
           <span className={styles.pName}>{productName}</span>
           <div className={styles.pDiscount}>
-            {boolDesct ? (
+            {discountPer > 0 && discountPer < 100 ? (
               <>
                 <span className={styles.priceDiscount}>
                   {discountPer}% DCTO.
                 </span>
-                <span className={styles.priceThrough}>${price}</span>
+                <span className={styles.priceThrough}>{formatoCLP(price)}</span>
               </>
             ) : (
               <>&nbsp;</>
             )}
           </div>
           <span className={styles.pCuotes}></span>
-          <span className={styles.pPrice}>${finalPrice}</span>
+          <span className={styles.pPrice}>{formatoCLP(finalPrice)}</span>
         </div>
       </div>
     </Link>

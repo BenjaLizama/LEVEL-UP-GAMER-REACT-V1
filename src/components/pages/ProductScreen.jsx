@@ -3,7 +3,7 @@
  * se tiene que quedar asi
  */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/ProductScreen.module.css";
 import { Link } from "react-router-dom";
 import SimpleIcon from "../atoms/SimpleIcon";
@@ -13,11 +13,14 @@ import SettingsOption from "../molecules/SettingsOption";
 import Footer from "../organisms/Footer";
 import { PRODUCT_DATA } from "../data/ProductData";
 import { formatoCLP } from "../../assets/utils/format";
-import Review from "../molecules/Review";
 import ReviewTemplate from "../template/ReviewTemplate";
 
 export default function ProductScreen() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   const product = PRODUCT_DATA.find((p) => p.id === id);
 
@@ -34,13 +37,14 @@ export default function ProductScreen() {
   const productName = product.productName;
   const price = product.price;
   const discountPer = product.discountPer;
-  const boolDesct = product.discountPer;
   const description = product.description;
   const categorie = product.categorie;
   var image = product.image || "/images/NoImage.webp";
   var finalPrice;
 
-  if (boolDesct) {
+  const filterDiscount = discountPer > 0 && discountPer < 100;
+
+  if (filterDiscount) {
     var finalPrice = Math.round(price - (price * discountPer) / 100);
     var finalTransferPrice =
       Math.round(price - (price * discountPer) / 100) - 3500;
@@ -49,7 +53,7 @@ export default function ProductScreen() {
     var finalPrice = price;
   }
 
-  if (boolDesct) {
+  if (filterDiscount) {
     var discount = (
       <>
         <div className={styles.textParallel}>

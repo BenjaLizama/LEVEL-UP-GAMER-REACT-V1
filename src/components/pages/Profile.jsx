@@ -4,7 +4,7 @@ import SettingsOption from "../molecules/SettingsOption";
 import { ICONS_REGULAR, ICONS_SOLID } from "../../assets/utils/icons";
 import Footer from "../organisms/Footer";
 import SettingsContainer from "../molecules/SettingsContainer";
-import MENU_OPTIONS from "../data/OptionsMenu";
+import MENU_OPTIONS from "../template/OptionsMenu";
 
 export default function Profile() {
   return (
