@@ -25,6 +25,9 @@ import {
   faCartArrowDown as faCartArrowDownSolid,
   faSearch as faSearchSolid,
   faFaceFrown as faFaceFrownSolid,
+  faLock as faLockSolid,
+  faEye as faEyeSolid,
+  faEyeSlash as faEyeSlashSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -60,6 +63,9 @@ export const ICONS_SOLID = {
   empty: faCartArrowDownSolid,
   search: faSearchSolid,
   sad: faFaceFrownSolid,
+  lock: faLockSolid,
+  mostrar: faEyeSolid,
+  ocultar: faEyeSlashSolid,
 };
 
 export const ICONS_REGULAR = {

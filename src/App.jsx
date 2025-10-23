@@ -16,9 +16,12 @@ function App() {
 
   const hideBanner =
     location.pathname.startsWith("/product") ||
-    location.pathname.startsWith("/marketplace");
+    location.pathname.startsWith("/marketplace") ||
+    location.pathname.startsWith("/login");
 
-  const hideNavBottomBar = location.pathname.startsWith("/product");
+  const hideNavBottomBar =
+    location.pathname.startsWith("/product") ||
+    location.pathname.startsWith("/login");
 
   useEffect(() => {
     if (
