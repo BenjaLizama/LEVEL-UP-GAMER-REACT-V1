@@ -9,20 +9,18 @@ import Profile from "./components/pages/Profile";
 import Test from "./components/pages/Test";
 import ProductScreen from "./components/pages/ProductScreen";
 import { useEffect } from "react";
+import Login from "./components/pages/Login";
 
 function App() {
   const location = useLocation();
 
-  // Regla 1: Ocultar Banner en /product Y /marketplace
   const hideBanner =
     location.pathname.startsWith("/product") ||
     location.pathname.startsWith("/marketplace");
 
-  // Regla 2: Ocultar NavBottomBar SÓLO en /product
   const hideNavBottomBar = location.pathname.startsWith("/product");
 
   useEffect(() => {
-    // Ajustado: Solo /product tiene el fondo oscuro
     if (
       location.pathname.startsWith("/product") ||
       location.pathname.startsWith("/marketplace")
@@ -35,11 +33,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* Controlado por hideBanner */}
       {!hideBanner && <Banner />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
@@ -47,7 +45,6 @@ function App() {
           <Route path="/product/:id" element={<ProductScreen />} />
         </Routes>
       </main>
-      {/* Controlado por hideNavBottomBar */}
       {!hideNavBottomBar && <NavBottomBar />}
     </div>
   );
