@@ -13,11 +13,21 @@ import { useEffect } from "react";
 function App() {
   const location = useLocation();
 
-  const hideLayout = location.pathname.startsWith("/product");
+  // Regla 1: Ocultar Banner en /product Y /marketplace
+  const hideBanner =
+    location.pathname.startsWith("/product") ||
+    location.pathname.startsWith("/marketplace");
+
+  // Regla 2: Ocultar NavBottomBar SÓLO en /product
+  const hideNavBottomBar = location.pathname.startsWith("/product");
 
   useEffect(() => {
-    if (location.pathname.startsWith("/product")) {
-      document.body.style.backgroundColor = "#121212"; // oscuro
+    // Ajustado: Solo /product tiene el fondo oscuro
+    if (
+      location.pathname.startsWith("/product") ||
+      location.pathname.startsWith("/marketplace")
+    ) {
+      document.body.style.backgroundColor = "#121212";
     } else {
       document.body.style.backgroundColor = "var(--background-color-2)"; // normal
     }
@@ -25,7 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      {!hideLayout && <Banner />}
+      {/* Controlado por hideBanner */}
+      {!hideBanner && <Banner />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,11 +44,11 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/test" element={<Test />} />
-          {/* Rutas relacionadas a elementos especificos */}
           <Route path="/product/:id" element={<ProductScreen />} />
         </Routes>
       </main>
-      {!hideLayout && <NavBottomBar />}
+      {/* Controlado por hideNavBottomBar */}
+      {!hideNavBottomBar && <NavBottomBar />}
     </div>
   );
 }

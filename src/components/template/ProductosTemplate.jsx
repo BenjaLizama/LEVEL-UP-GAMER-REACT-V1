@@ -3,8 +3,10 @@ import styles from "../../styles/ProductosTemplate.module.css";
 import Product from "../molecules/Product";
 import { PRODUCT_DATA } from "../data/ProductData";
 import { CATEGORIES } from "../../assets/utils/categories";
+import Input from "../atoms/Input";
+import { ICONS_SOLID } from "../../assets/utils/icons";
 
-export default function ProductosTemplate({ minPrice, maxPrice }) {
+export default function ProductosTemplate() {
   const [categoriaFiltro, setCategoriaFiltro] = useState("");
   const [priceFilter, setPriceFilter] = useState(JSON.stringify([null, null]));
 
@@ -49,10 +51,17 @@ export default function ProductosTemplate({ minPrice, maxPrice }) {
 
   return (
     <>
+      <div className={styles.titleContainer}>
+        <span className={styles.title}>Encuentra tus productos favoritos</span>
+      </div>
+      <div className={styles.search}>
+        <Input icon={ICONS_SOLID.search} />
+      </div>
       <div className={styles.filtersContainer}>
         <select
           value={categoriaFiltro}
           onChange={(e) => setCategoriaFiltro(e.target.value)}
+          className={styles.select}
         >
           <option value={""}>Filtrar por categoria</option>
           <option value={CATEGORIES.juego_mesa}>Juegos de mesa</option>
@@ -69,10 +78,8 @@ export default function ProductosTemplate({ minPrice, maxPrice }) {
 
         <select
           value={priceFilter}
-          onChange={(e) => {
-            setPriceFilter(e.target.value);
-            console.log(priceFilter);
-          }}
+          onChange={(e) => setPriceFilter(e.target.value)}
+          className={styles.select}
         >
           <option value={JSON.stringify([null, null])}>Rango de precios</option>
           <option value={JSON.stringify([null, 10000])}>
@@ -94,14 +101,6 @@ export default function ProductosTemplate({ minPrice, maxPrice }) {
             Mas de $500.000
           </option>
         </select>
-        <button
-          onClick={() => {
-            setCategoriaFiltro("");
-            setPriceFilter(JSON.stringify([null, null]));
-          }}
-        >
-          Restaurar filtros
-        </button>
       </div>
       <div className={styles.container}>
         {productosFiltrados.length > 0 ? (
