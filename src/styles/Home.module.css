@@ -103,3 +103,39 @@ svg {
     grid-column: 1 / -1;
   }
 }
+
+@media (min-width: 1024px) {
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+  }
+
+  .third {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    max-width: 40vw;
+  }
+
+  .darkBackground {
+    display: flex;
+    align-self: center;
+    max-width: 60vw;
+  }
+
+  .maps {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 50vw;
+  }
+
+  .fifth {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 40vw;
+  }
+}

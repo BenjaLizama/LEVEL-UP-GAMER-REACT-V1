@@ -36,9 +36,6 @@
   display: none;
 }
 
-.navText {
-}
-
 .logo {
   width: 40%;
   max-width: 100px;
@@ -48,5 +45,14 @@
 @media (orientation: landscape) {
   .background {
     height: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navContainer {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    justify-self: first normal;
   }
 }

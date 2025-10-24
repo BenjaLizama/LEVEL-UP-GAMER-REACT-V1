@@ -34,8 +34,8 @@ export default function Home() {
 
       <div className={styles.darkBackground}>
         <SpotLightBorder>
+          <Title text="Últimas noticias" />
           <div className={styles.third}>
-            <Title text="Últimas noticias" />
             {Object.values(NOTICES_DATA).map((n, i) => (
               <Publication key={i} {...n} />
             ))}
@@ -43,8 +43,8 @@ export default function Home() {
         </SpotLightBorder>
         <SpotLightBorder>
           <div className={styles.fourth}>
+            <Title text={"Top juegos"} />
             <div className={styles.top}>
-              <Title text={"Top juegos"} />
               {Object.values(VOTE_CARD).map((n, i) => (
                 <VoteCard key={i} {...n} />
               ))}

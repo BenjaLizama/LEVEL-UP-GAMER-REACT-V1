@@ -66,3 +66,19 @@
   flex-wrap: wrap;
   text-align: center;
 }
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .filtersContainer {
+    align-items: flex-start;
+  }
+
+  .titleContainer {
+    align-items: flex-start;
+  }
+}
