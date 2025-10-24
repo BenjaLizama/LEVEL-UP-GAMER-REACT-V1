@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/Product.module.css";
 import { formatoCLP } from "../../assets/utils/format";
