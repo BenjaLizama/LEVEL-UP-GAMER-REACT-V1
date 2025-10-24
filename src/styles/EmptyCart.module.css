@@ -10,6 +10,7 @@
   font-family: var(--fuente-principal);
   background-color: var(--background-color-1);
   width: 100%;
+  margin-top: 8rem;
 }
 .container p {
   display: block;
@@ -18,9 +19,10 @@
   padding: 1rem 0rem;
 }
 
-.container a {
+.link {
   text-decoration: none;
   font-size: 1.1rem;
+  color: var(--color-acento-1);
 }
 
 .title1 {

@@ -1,0 +1,9 @@
+.total {
+  display: flex;
+  justify-content: center;
+  color: var(--color-texto-principal);
+  font-family: var(--fuente-principal);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 8rem;
+}
