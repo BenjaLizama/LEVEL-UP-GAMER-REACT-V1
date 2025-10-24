@@ -25,7 +25,7 @@ describe("Componente Review", () => {
       screen.getByText(testProps.puntuation.toString())
     ).toBeInTheDocument();
 
-    // --- Verificación de las estrellas ---
+    // Verificacion de estrellas
     const puntuationContainer = screen
       .getByText(testProps.puntuation.toString())
       .closest("span");
@@ -60,7 +60,7 @@ describe("Componente Review", () => {
   });
 
   // -> Test 2: Validar que no se pinten estrallas si la puntuacion es 0 <- \\
-  test("renders correctly with 0 puntuation", () => {
+  test("Renderiza las estrellas correctamente si tiene 0 de puntuacion", () => {
     render(<Review autor="Ana" puntuation={0} review="No me gustó." />);
 
     const puntuationContainer = screen.getByText("0").closest("span");
@@ -84,8 +84,8 @@ describe("Componente Review", () => {
   });
 
   // -> Test 3: Validar que se pintan todas las estrellas si la puntuacion es 5 <- \\
-  test("renders correctly with 5 puntuation", () => {
-    render(<Review autor="Pedro" puntuation={5} review="¡Excelente!" />);
+  test("Renderiza las 5 estrellas correctamente", () => {
+    render(<Review autor="Bilbaolabs" puntuation={5} review="Una maquina" />);
 
     const puntuationContainer = screen.getByText("5").closest("span");
     const starIcons = within(puntuationContainer).getAllByRole("img", {
