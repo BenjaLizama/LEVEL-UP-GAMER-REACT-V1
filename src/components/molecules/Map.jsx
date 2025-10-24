@@ -8,7 +8,7 @@ export default function Map({ mapa }) {
         className={styles.mapa}
         src={mapa}
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
   );
