@@ -15,6 +15,7 @@
   --color-acento-1: #1e90ff;
   --color-acento-2: #39ff14;
   --color-error: #d51313;
+  --color-correct: #2eb616;
 
   --color-acento-1-hover: #1e90ff90;
 }
@@ -63,8 +64,4 @@ main {
 
 hr {
   margin: 0rem 1rem;
-}
-
-.error {
-  border: 2px solid var(--color-error);
 }

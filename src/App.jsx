@@ -10,6 +10,7 @@ import Test from "./components/pages/Test";
 import ProductScreen from "./components/pages/ProductScreen";
 import { useEffect } from "react";
 import Login from "./components/pages/Login";
+import CreateAccount from "./components/pages/CreateAccount";
 
 function App() {
   const location = useLocation();
@@ -17,11 +18,13 @@ function App() {
   const hideBanner =
     location.pathname.startsWith("/product") ||
     location.pathname.startsWith("/marketplace") ||
-    location.pathname.startsWith("/login");
+    location.pathname.startsWith("/login") ||
+    location.pathname.startsWith("/create-account");
 
   const hideNavBottomBar =
     location.pathname.startsWith("/product") ||
-    location.pathname.startsWith("/login");
+    location.pathname.startsWith("/login") ||
+    location.pathname.startsWith("/create-account");
 
   useEffect(() => {
     if (
@@ -41,6 +44,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
