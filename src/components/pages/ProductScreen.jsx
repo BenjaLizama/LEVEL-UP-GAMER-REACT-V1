@@ -36,7 +36,7 @@ export default function ProductScreen() {
   }
   const add = (producto) => {
     const actualizar = agregar_prod(producto);
-    console.log("se actualizo oe", actualizar);
+    console.log("se agrego el producto", actualizar);
   };
 
   const sealer = product.sealer;
@@ -135,12 +135,7 @@ export default function ProductScreen() {
           >
             Agregar al carro
           </button>
-          <button
-            className={styles.buttonPrimary}
-            onClick={() => prueva_buscar(product)}
-          >
-            Comprar ahora
-          </button>
+          <button className={styles.buttonPrimary}>Comprar ahora</button>
         </div>
       </>
     );
