@@ -4,14 +4,6 @@ import SimpleIcon from "../atoms/SimpleIcon";
 import { ICONS_SOLID } from "../../assets/utils/icons";
 
 export default function Review({ autor = "", puntuation = 0, review = "" }) {
-  const paintedStar = (
-    <SimpleIcon icon={ICONS_SOLID.star} color={"#ebaf0aff"} />
-  );
-
-  const noPaintedStar = (
-    <SimpleIcon icon={ICONS_SOLID.star} color={"#cfcfcfff"} />
-  );
-
   const maxStars = 5;
 
   return (
@@ -20,9 +12,16 @@ export default function Review({ autor = "", puntuation = 0, review = "" }) {
         <span className={styles.autor}>{autor}</span>
         <span className={styles.puntuationContainer}>
           <div className={styles.icon}>
-            {Array.from({ length: maxStars }).map((_, index) =>
-              index < puntuation ? paintedStar : noPaintedStar
-            )}
+            {Array.from({ length: maxStars }).map((_, index) => {
+              const isPainted = index < puntuation;
+              return (
+                <SimpleIcon
+                  key={`star-${index}`}
+                  icon={ICONS_SOLID.star}
+                  color={isPainted ? "#ebaf0aff" : "#cfcfcfff"}
+                />
+              );
+            })}
           </div>
           <div className={styles.puntuation}>{puntuation}</div>
         </span>
