@@ -41,6 +41,11 @@ export default function Profile() {
           icon={ICONS_SOLID.billetera}
           children={MENU_OPTIONS.ANADIR_FONDOS}
         />
+        <SettingsOption
+          text={"Puntos LEVEL-UP"}
+          icon={ICONS_SOLID.circulo}
+          children={MENU_OPTIONS.ANADIR_FONDOS}
+        />
       </SettingsContainer>
       {/* Mi perfil */}
       <SettingsContainer text={"Mi perfil"}>

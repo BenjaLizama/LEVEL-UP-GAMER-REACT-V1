@@ -18,10 +18,6 @@ export default function Publication({
   imageContent,
 }) {
   const regex = /(#\w+)/g;
-  const newTextContent = textContent.replace(
-    regex,
-    '<span class="hashtag">#$1</span>'
-  );
 
   const partes = textContent.split(regex);
 
