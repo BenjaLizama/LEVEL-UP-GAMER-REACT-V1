@@ -4,8 +4,9 @@
  */
 
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../../styles/ProductScreen.module.css";
-import { Link } from "react-router-dom";
+import { href, Link } from "react-router-dom";
 import SimpleIcon from "../atoms/SimpleIcon";
 import { useParams } from "react-router-dom";
 import { ICONS_SOLID } from "../../assets/utils/icons";
@@ -19,7 +20,11 @@ import { calc_total } from "../../assets/utils/cart";
 import { eliminar_prod } from "../../assets/utils/cart";
 export default function ProductScreen() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
+  const irAPagina = () => {
+    navigate("/cart");
+  };
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -99,7 +104,15 @@ export default function ProductScreen() {
           >
             Agregar al carro
           </button>
-          <button className={styles.buttonPrimary}>Comprar ahora</button>
+          <button
+            className={styles.buttonPrimary}
+            onClick={() => {
+              add(product);
+              navigate("/cart");
+            }}
+          >
+            Comprar ahora
+          </button>
         </div>
       </>
     );
@@ -135,7 +148,15 @@ export default function ProductScreen() {
           >
             Agregar al carro
           </button>
-          <button className={styles.buttonPrimary}>Comprar ahora</button>
+          <button
+            className={styles.buttonPrimary}
+            onClick={() => {
+              add(product);
+              navigate("/cart");
+            }}
+          >
+            Comprar ahora
+          </button>
         </div>
       </>
     );
