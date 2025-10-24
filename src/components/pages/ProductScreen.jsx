@@ -14,7 +14,9 @@ import Footer from "../organisms/Footer";
 import { PRODUCT_DATA } from "../data/ProductData";
 import { formatoCLP } from "../../assets/utils/format";
 import ReviewTemplate from "../template/ReviewTemplate";
-
+import { agregar_prod } from "../../assets/utils/cart";
+import { calc_total } from "../../assets/utils/cart";
+import { eliminar_prod } from "../../assets/utils/cart";
 export default function ProductScreen() {
   const { id } = useParams();
 
@@ -32,6 +34,10 @@ export default function ProductScreen() {
       </div>
     );
   }
+  const add = (producto) => {
+    const actualizar = agregar_prod(producto);
+    console.log("se actualizo oe", actualizar);
+  };
 
   const sealer = product.sealer;
   const productName = product.productName;
@@ -87,7 +93,12 @@ export default function ProductScreen() {
           <span className={styles.stock}>Más de {20} unidades</span>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.buttonSecondary}>Agregar al carro</button>
+          <button
+            className={styles.buttonSecondary}
+            onClick={() => add(product)}
+          >
+            Agregar al carro
+          </button>
           <button className={styles.buttonPrimary}>Comprar ahora</button>
         </div>
       </>
@@ -118,8 +129,18 @@ export default function ProductScreen() {
           <span className={styles.stock}>Más de {20} unidades</span>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.buttonSecondary}>Agregar al carro</button>
-          <button className={styles.buttonPrimary}>Comprar ahora</button>
+          <button
+            className={styles.buttonSecondary}
+            onClick={() => add(product)}
+          >
+            Agregar al carro
+          </button>
+          <button
+            className={styles.buttonPrimary}
+            onClick={() => prueva_buscar(product)}
+          >
+            Comprar ahora
+          </button>
         </div>
       </>
     );
