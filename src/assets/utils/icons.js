@@ -28,6 +28,7 @@ import {
   faLock as faLockSolid,
   faEye as faEyeSolid,
   faEyeSlash as faEyeSlashSolid,
+  faCircle as faCircleSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHeart as faHeartRegular,
@@ -66,6 +67,7 @@ export const ICONS_SOLID = {
   lock: faLockSolid,
   mostrar: faEyeSolid,
   ocultar: faEyeSlashSolid,
+  circulo: faCircleSolid,
 };
 
 export const ICONS_REGULAR = {

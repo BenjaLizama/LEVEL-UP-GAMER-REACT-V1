@@ -6,7 +6,6 @@ import NavBottomBar from "./components/organisms/NavBottomBar";
 import Marketplace from "./components/pages/Marketplace";
 import Cart from "./components/pages/Cart";
 import Profile from "./components/pages/Profile";
-import Test from "./components/pages/Test";
 import ProductScreen from "./components/pages/ProductScreen";
 import { useEffect } from "react";
 import Login from "./components/pages/Login";
@@ -33,7 +32,7 @@ function App() {
     ) {
       document.body.style.backgroundColor = "#121212";
     } else {
-      document.body.style.backgroundColor = "var(--background-color-2)"; // normal
+      document.body.style.backgroundColor = "var(--background-color-2)";
     }
   }, [location.pathname]);
 
@@ -48,7 +47,6 @@ function App() {
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/test" element={<Test />} />
           <Route path="/product/:id" element={<ProductScreen />} />
         </Routes>
       </main>
