@@ -1,5 +1,5 @@
 import { data } from "react-router-dom";
-
+import { PRODUCT_DATA } from "../../components/data/ProductData";
 export function agregar_prod(product) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -37,8 +37,10 @@ export function calc_total() {
   const total = data.reduce(
     (acumulador, product) =>
       acumulador +
-      Math.round(product.price - product.price * (product.descuento / 100)) *
-        product.quantity,
+      Math.round(
+        (product.price - product.price * (product.descuento / 100)) *
+          product.quantity
+      ),
     0
   );
   console.log("total", total);
@@ -47,4 +49,20 @@ export function calc_total() {
 
 export function comprar() {
   localStorage.removeItem("cart");
+}
+
+export function obtener_datos() {
+  const cart = localStorage.getItem("cart");
+  if (!cart) return [];
+  const data = JSON.parse(cart);
+  if (!Array.isArray(data) || data.length === 0) return [];
+  let id_productos = data.map((product) => product.id);
+  const productos_carrito = PRODUCT_DATA.filter((product) =>
+    id_productos.includes(product.id)
+  ).map((product) => {
+    const item = data.find((p) => p.id === product.id);
+    return { ...product, quantity: item.quantity };
+  });
+  localStorage.setItem(JSON.stringify("cart2", productos_carrito));
+  return productos_carrito;
 }
